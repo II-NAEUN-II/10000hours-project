@@ -27,3 +27,283 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+:root {
+    --main-color: #FFFFFF;
+    --sub-color: #5B2386;
+    --btn-color: #FCEE21;
+}
+
+/* main CSS */ 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "GmarketSansMedium", sans-serif;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+section .content {
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 120px;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;       /* 가로축 정렬 */
+    align-items: center;        /* 세로축 정렬 */
+    margin-bottom: 50px;
+}
+
+.img-title {
+    position: absolute;
+    width: 564px;
+    /* margin-bottom: 125px; */
+}
+
+.img-title img {
+    width: 100%;
+    height: auto;
+}
+
+.img-clock {
+    position: relative;
+    width: 261px;
+    height: 265px;
+}
+
+/* body-intro */
+.intro-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: OTEnjoystoriesBA;
+    font-size: 36px;
+    color: #F5DF4D;
+
+    margin-bottom: 78px;
+}
+
+.intro-explain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    font-size: 18px;
+    text-align: center;
+
+    margin-bottom: 102px;
+}
+
+.intro-explain img {
+    padding-top: 20px;
+}
+
+.intro-explain p {
+    position: absolute;
+
+    line-height: 1.5;
+}
+
+.intro-explain span {
+    font-family: GmarketSansBold;
+    font-size: 24px;
+}
+
+/* body-input */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 24px;
+    margin-bottom: 115px;
+}
+
+.inputs input {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+
+    padding: 17px;
+    margin: 17px;
+    width: 228px;
+    border-radius: 7px;
+
+    text-align: center;
+}
+
+.inputs input::placeholder {
+    color: #BABCBE;
+}
+
+/* body-training-time-wrapper */
+.training-time-wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 147px;
+}
+
+.training-time-wrapper button {
+    position: relative;
+
+    background-color: var(--btn-color);
+    color: var(--sub-color);
+
+    font-family: GmarketSansBold;
+    font-size: 24px;
+    border-radius: 56px;
+
+    padding: 20px 50px;
+
+    /* word-break: keep-all; */
+}
+
+/* .training-time-wrapper .click_img {
+    position: absolute;
+    right: px;
+    bottom: px;
+} */
+
+/* body-result */
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: 1.5;
+    font-size: 24px;
+    margin-bottom: 127px;
+}
+
+.result span {
+    font-family: GmarketSansBold;
+    font-size: 72px;
+
+    padding: 12px;
+}
+
+/* body-button */
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 130px;
+}
+
+.buttons .modal_btn {
+    background-color: var(--btn-color);
+    color: var(--sub-color);
+
+    font-family: GmarketSansBold;
+    font-size: 24px;
+    border-radius: 56px;
+
+    padding: 20px 50px;
+    margin-right: 18px;
+}
+
+.buttons .share_btn {
+    background-color: var(--main-color);
+    color: var(--sub-color);
+
+    font-family: GmarketSansBold;
+    font-size: 24px;
+    border-radius: 56px;
+
+    padding: 20px 50px;
+}
+
+/* footer */
+footer .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+/* modal CSS */
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#modal .modal-warp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 800px;
+    height: 800px;
+
+    background-color: var(--main-color);
+    border-radius: 30px;
+}
+
+.modal-warp h1 {
+    font-family: OTEnjoystoriesBA;
+    font-size: 96px;
+    color: var(--sub-color);
+}
+
+.modal-warp h2 {
+    font-family: OTEnjoystoriesBA;
+    font-size: 36px;
+    color: var(--sub-color);
+}
+
+.modal-warp button {
+    background-color: var(--btn-color);
+    color: var(--sub-color);
+
+    font-family: GmarketSansBold;
+    font-size: 24px;
+    border-radius: 56px;
+
+    padding: 20px 50px;
+    margin-top: 74px;
+}
+
+/* 모바일 */
